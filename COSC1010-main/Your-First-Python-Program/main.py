@@ -1,6 +1,6 @@
 #
-# Name
-# Date
+# Name Tayson Wheeler
+# Date 8/31/24
 # Your First Python Program
 # COSC 1010 
 #
