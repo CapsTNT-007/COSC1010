@@ -8,3 +8,5 @@
 # This is my first Python program.
 
 print("Hello World!")
+price = int(68.549)
+print(price)
