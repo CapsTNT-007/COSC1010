@@ -37,8 +37,26 @@ def main():
                 'Wisconsin':'Madison', 'Wyoming':'Cheyenne'}
 
     # Local variables
+    stateQuestion = 0
+    cont = 'y'
+    countC = 0
+    countI = 0
 
     # Continue until user quits the game.
+    while cont == 'y':
+
+        stateQuestion = random.choice(list(capitals))
+        guess = input("What is the capital of {}? ".format(stateQuestion))
+
+        if guess == capitals[stateQuestion]:
+            print('Horray! You are correct!')
+            countC += 1
+            cont = input('Do you want to continue?(y to continue, else to end) ')
+        else:
+            print('Uh oh, you got that inccorect.')
+            countI += 1
+            cont = input('Do you want to continue?(y to continue, else to end) ')
+    print('Congradualtions, you got', countC, 'correct, and', countI, 'incorrect.')
 
 # Call the main function.
 main()
