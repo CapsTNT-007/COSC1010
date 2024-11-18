@@ -1,6 +1,6 @@
 #
-# Name
-# Date
+# Name Tayson Wheeler
+# Date 11/17/24
 # Capital Quiz Programming Project
 # COSC 2409 DNT
 #
@@ -41,13 +41,16 @@ def main():
     cont = 'y'
     countC = 0
     countI = 0
+    guess = 0
 
     # Continue until user quits the game.
     while cont == 'y':
 
+        #Gets a random question
         stateQuestion = random.choice(list(capitals))
         guess = input("What is the capital of {}? ".format(stateQuestion))
 
+        #Sees if they input the right or wrong answer
         if guess == capitals[stateQuestion]:
             print('Horray! You are correct!')
             countC += 1
@@ -56,6 +59,8 @@ def main():
             print('Uh oh, you got that inccorect.')
             countI += 1
             cont = input('Do you want to continue?(y to continue, else to end) ')
+
+    #Prints results
     print('Congradualtions, you got', countC, 'correct, and', countI, 'incorrect.')
 
 # Call the main function.
