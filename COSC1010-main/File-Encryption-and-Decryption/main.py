@@ -57,6 +57,16 @@ data.close()
 with open('encrypted.txt','r', encoding='utf8') as encrypted:
         #prints file
         for line in encrypted:
-             print(line)
+            for character in line:
+                for key in encryptionData:
+                    #looks to see if the character is in the dictionary
+                    if character == encryptionData[key]:
+                        #converts character to decrypted character
+                        characterToAdd = str(key)
+                        #adds decrypted character to eachother to create a line
+                        fullLine = "".join([fullLine, characterToAdd])
+            #prints line and resets variable
+            print(fullLine)
+            fullLine = ''
 #closes file
 encrypted.close()
